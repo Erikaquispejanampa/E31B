@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutusComponent } from './pages/aboutus/aboutus.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
     ContactusComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule //Llamar al enrutador creado
   ],
   providers: [],
   bootstrap: [AppComponent]
