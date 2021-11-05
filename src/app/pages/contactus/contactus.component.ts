@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
+  contactusForm = this.fb.group({   //Crear variable para el formulario
+    person: this.fb.group({
+      firstname: [''],
+      lastname: [''],
+    }),
+    email: [''],
+    message: ['']
+  });
+
+  constructor(private fb: FormBuilder) { } //Crear variable para llamar a FormBuilder
 
   ngOnInit(): void {
   }
