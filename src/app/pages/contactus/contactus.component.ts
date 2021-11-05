@@ -25,7 +25,6 @@ export class ContactusComponent implements OnInit {
     } else {
       alert("Formulario no valido");
     }
-
   }
 
   ngOnInit(): void {
