@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -10,14 +10,23 @@ export class ContactusComponent implements OnInit {
 
   contactusForm = this.fb.group({   //Crear variable para el formulario
     person: this.fb.group({
-      firstname: [''],
-      lastname: [''],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
     }),
-    email: [''],
+    email: ['', [Validators.required, Validators.email]],
     message: ['']
   });
 
   constructor(private fb: FormBuilder) { } //Crear variable para llamar a FormBuilder
+
+  __onSubmit(){
+    if(this.contactusForm.valid){
+      console.log(this.contactusForm.value); //Este método va escribir en la consola los datos que tenga el formulario
+    } else {
+      alert("Formulario no valido");
+    }
+
+  }
 
   ngOnInit(): void {
   }
