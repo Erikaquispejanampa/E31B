@@ -2,8 +2,10 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./access/login/login.component";
 import { AboutusComponent } from "./pages/aboutus/aboutus.component";
+import { ApartmentComponent } from "./pages/apartment/apartment.component";
 import { ContactusComponent } from "./pages/contactus/contactus.component";
 import { HomeComponent } from "./pages/home/home.component";
+import { ProjectComponent } from "./pages/project/project.component";
 
 //Crear una constante para llamar las rutas
 const routes: Routes = [
@@ -11,7 +13,9 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'contactus', component: ContactusComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'}
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'project/:id', component: ProjectComponent}, //Get: ruta con parámetro
+  { path: 'apartment/:id', component: ApartmentComponent}
 ];
 
 @NgModule({

@@ -8,6 +8,8 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './access/login/login.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { ApartmentComponent } from './pages/apartment/apartment.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LoginComponent } from './access/login/login.component';
     HomeComponent,
     AboutusComponent,
     ContactusComponent,
-    LoginComponent
+    LoginComponent,
+    ProjectComponent,
+    ApartmentComponent
   ],
   imports: [
     BrowserModule,
